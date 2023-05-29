@@ -17,11 +17,11 @@ public class OrderProcessor : IOrderProcessor
         _dbContext = dbContext;
     }
 
-    public async void ProcessOrder(Order order)
+    public void ProcessOrder(Order order)
     {
-        await Task.Delay(TimeSpan.FromSeconds(30));
+        Task.Delay(TimeSpan.FromSeconds(30));
         
-        order.Status = "выполнен";
+        order.Status = "done";
         order.UpdatedAt = DateTime.Now;
 
         _dbContext.SaveChanges();
