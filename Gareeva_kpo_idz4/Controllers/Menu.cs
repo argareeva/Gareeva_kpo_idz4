@@ -17,7 +17,7 @@ namespace Gareeva_kpo_idz4.Controllers
 
         // GET: api/Menu
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Menu>>> GetMenu()
+        public async Task<ActionResult<IEnumerable<Dish>>> GetMenu()
         {
             if (_dbContext.Dish == null)
             {
